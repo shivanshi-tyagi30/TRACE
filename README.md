@@ -133,3 +133,6 @@ npm run dev
 ```
 
 Open `http://localhost:5173`.
+
+<img width="1123" height="1123" alt="Untitled Diagram drawio (3)" src="https://github.com/user-attachments/assets/3a7c7ffa-0470-46a2-994c-16746dee1d8d" />
+
