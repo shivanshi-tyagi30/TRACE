@@ -1,4 +1,4 @@
-# TRACE: Transparent Record & Acoustic Cross-Verification Engine
+# TRACE
 
 Grounded meeting transcription and structured documentation. LLMs propose candidates; deterministic Python rules prove, constrain, or reject them.
 
