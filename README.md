@@ -51,27 +51,34 @@ Audio Input ──► Groq Cloud (whisper-large-v3) ──► 10-min audio trans
 
 ---
 
-## Project Sturcture
+## Repository Structure
 
+```text
+.
 ├── backend/
 │   ├── app/
-│   │   ├── api/             # REST routes for jobs, health, and schemas
-│   │   ├── core/            # Database, error types, stages, text utilities
-│   │   ├── data/            # Pre-seeded tech terms and places dictionaries
-│   │   ├── llm/             # Gemini client with retry and backoff logic
-│   │   ├── models/          # Pydantic schemas for records and LLM inputs
-│   │   ├── pipeline/        # 13-stage pipeline implementations
-│   │   ├── config.py        # Environment settings and threshold constants
+│   │   ├── api/             # REST endpoints (jobs, health, schema)
+│   │   ├── core/            # SQLite db, state machine stages, text utils
+│   │   ├── data/            # Dictionaries (places.txt, tech_terms.txt)
+│   │   ├── llm/             # Gemini client, retry backoff, prompt templates
+│   │   ├── models/          # Pydantic schemas (record, segment, edit, word)
+│   │   ├── pipeline/        # 13-stage pipeline (normalize, vad, stt, diarize,
+│   │   │                    #   refine, guard, document, verify, render)
+│   │   ├── config.py        # Settings and operational thresholds
 │   │   └── main.py          # FastAPI application entrypoint
-│   ├── Dockerfile           # Production container build
-│   └── requirements.txt     # Python dependencies
+│   ├── Dockerfile           # Production container definition
+│   └── requirements.txt     # Backend Python dependencies
 ├── frontend/
 │   ├── src/
 │   │   ├── components/      # Workspace, PlayerBar, TranscriptPane, RecordPane
-│   │   ├── hooks/           # useAudio synchronization hook
-│   │   └── lib/             # API client, diff annotations, speaker rename
+│   │   ├── hooks/           # useAudio 60 FPS playback synchronization
+│   │   └── lib/             # API client, text annotations, speaker rename
 │   └── package.json         # React 19 frontend dependencies
-└── render.yaml              # Render Blueprint deployment configuration
+├── docs/
+│   ├── TRACE_SYSTEM_ARCHITECTURE.md  # Detailed systems specification
+│   └── api-contract.md      # Frontend-backend contract
+└── render.yaml              # Render cloud deployment blueprint
+```
 
 ---
 
