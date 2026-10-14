@@ -95,7 +95,8 @@ Audio Input ──► Groq Cloud (whisper-large-v3) ──► 10-min audio trans
 
 ---
 
-<img width="1143" height="2729" alt="Untitled Diagram drawio (1)" src="https://github.com/user-attachments/assets/54bc4549-1455-40f9-a79f-c5726b688860" />
+<img width="1081" height="2730" alt="Untitled Diagram drawio (2)" src="https://github.com/user-attachments/assets/4964fe03-1dc4-4b62-a10e-73741d052b6b" />
+
 
 
 
